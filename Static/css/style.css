@@ -1,0 +1,629 @@
+
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+
+h1 {
+    color: #0f4d0f;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 30px;
+    max-width: 900px;
+    text-align: justify;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 25px;
+    background-color: rgb(182, 237, 182);
+}
+
+.logo h1,
+.navbar > h1 {
+    margin: 0;
+    color: #0f4d0f;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #07912e;
+}
+
+/* =========================
+   OLD IMAGE SECTION
+========================= */
+
+.images {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.image-container {
+    flex: 1;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.02);
+}
+
+.kenya-heading {
+    color: green;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.kenya-paragraph {
+    background-color: bisque;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =========================
+   EXPLORE KENYA PAGE
+========================= */
+
+.destinations {
+    padding: 40px 20px;
+    background-color: #f5f8f3;
+}
+
+.destinations h2 {
+    color: #174d2a;
+    margin-bottom: 35px;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.destination-card {
+    min-width: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.04);
+}
+
+.destination-card h3 {
+    color: #176b35;
+    font-size: 21px;
+    margin: 18px 15px 10px;
+}
+
+.destination-card p {
+    background-color: transparent;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 10px 15px 18px;
+    text-align: left;
+}
+
+.destination-card a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 18px;
+    background-color: #16833b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.destination-card a:hover {
+    background-color: #105c2a;
+}
+
+/* =========================
+   HOME PAGE HERO
+========================= */
+
+.hero {
+    min-height: 400px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/lion tsavo east.jpg")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: clamp(30px, 5vw, 50px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 15px auto 25px;
+    text-align: center;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-btn,
+.explore-btn,
+.about-button a {
+    display: inline-block;
+    background-color: #16833b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.hero-btn:hover,
+.explore-btn:hover,
+.about-button a:hover {
+    background-color: #105c2a;
+    transform: translateY(-3px);
+}
+
+.explore-btn {
+    margin-top: 10px;
+}
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.welcome p {
+    background-color: transparent;
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.8;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* =========================
+   WHY VISIT KENYA
+========================= */
+
+.why-visit {
+    background-color: #f1f7f0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 25px auto 0;
+}
+
+.why-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-card h3 {
+    color: #176b35;
+}
+
+.why-card p {
+    background-color: transparent;
+    line-height: 1.7;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* =========================
+   FEATURED DESTINATIONS
+========================= */
+
+.featured {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.featured-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.featured-card {
+    min-width: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-card h3 {
+    color: #176b35;
+    margin: 18px 12px 10px;
+}
+
+.featured-card p {
+    background-color: transparent;
+    line-height: 1.6;
+    margin: 10px 15px;
+    text-align: center;
+}
+
+/* =========================
+   KENYA FACTS
+========================= */
+
+.kenya-facts {
+    background-color: #f1f7f0;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto 0;
+}
+
+.fact-card {
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.fact-card h3 {
+    color: #176b35;
+    overflow-wrap: anywhere;
+}
+
+.fact-card p {
+    background-color: transparent;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../images/maasaimara.jpg")
+        center / cover no-repeat;
+
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.about-hero h2 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    background-color: transparent;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    background-color: #f5f8f3;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #16833b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.about-text h2 {
+    color: #176b35;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.about-text p {
+    background-color: transparent;
+    color: #444;
+    max-width: none;
+    margin: 15px 0;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-list {
+    padding-left: 25px;
+    line-height: 2;
+    color: #444;
+}
+
+.about-button {
+    text-align: center;
+    margin: 35px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #123d25;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 24px;
+}
+
+.footer p {
+    background-color: transparent;
+    color: white;
+    max-width: none;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer .copyright {
+    border-top: 1px solid #52745e;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+    .destination-container,
+    .why-container,
+    .featured-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .facts-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .destination-container,
+    .why-container,
+    .featured-container,
+    .facts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .destinations,
+    .welcome,
+    .why-visit,
+    .featured,
+    .kenya-facts {
+        padding: 30px 15px;
+    }
+
+    .about-hero {
+        padding: 50px 15px;
+    }
+
+    .about-hero h2 {
+        font-size: 30px;
+    }
+
+    .about-content {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .about-text {
+        padding: 20px;
+    }
+
+    .images {
+        flex-direction: column;
+    }
+
+    .image-container {
+        flex: auto;
+        height: 250px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
